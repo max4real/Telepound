@@ -4,4 +4,6 @@ import 'package:get/get.dart';
 class DataController extends GetxController{
   String token = "";
   late ProfileModel profileModel;
+
+  
 }

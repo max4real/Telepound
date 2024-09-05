@@ -31,9 +31,6 @@ class LoginPage extends StatelessWidget {
                 children: [
                   const Text(
                     "Login",
-                    // style: GoogleFonts.robotoSlab(
-                    //   fontSize: 40,
-                    // )
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                   TextField(
@@ -97,7 +94,7 @@ class LoginPage extends StatelessWidget {
                         "SIGN UP",
                         style: TextStyle(
                           fontSize: 18,
-                          color: const Color.fromARGB(255, 223, 172, 53),
+                          color:  Color.fromARGB(255, 223, 172, 53),
                         ),
                       ))
                 ],
