@@ -43,7 +43,7 @@ class LoginController extends GetxController {
           dataController.profileModel = profileModel_;
          
           // Get.to(() =>  const MainPage());
-          Get.offAll(const MainPage());
+          Get.offAll(() => MainPage());
         } else {
           Get.snackbar("Error", "Something Wrong Here");
         }

@@ -1,4 +1,5 @@
 import 'package:api_call/modules/c_data_controller.dart';
+import 'package:api_call/modules/login/v_login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -87,10 +88,12 @@ class ProfilePage extends StatelessWidget {
                     Expanded(
                       child: ListView(children: [
                         Card(
-                          margin: EdgeInsets.all(1),
+                          margin: const EdgeInsets.all(1),
                           elevation: 0.5,
                           child: ListTile(
-                            onTap: () {},
+                            onTap: () {
+                              Get.to(const LoginPage());
+                            },
                             splashColor: const Color.fromARGB(255, 85, 94, 228)
                                 .withOpacity(0.5),
                             style: ListTileStyle.list,

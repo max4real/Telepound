@@ -15,6 +15,7 @@ class UserListPage extends StatelessWidget {
         title: const Text("Contacts"),
         backgroundColor:
             const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
+        //  const Color(0XFFDEAB42).withOpacity(0.9),
       ),
       body: ValueListenableBuilder(
         valueListenable: controller.xFecthing,
@@ -35,18 +36,20 @@ class UserListPage extends StatelessWidget {
                     itemCount: value.length,
                     itemBuilder: (context, index) {
                       return Card(
-                        margin: EdgeInsets.all(1),
+                        margin: const EdgeInsets.all(1),
                         elevation: 0.5,
                         child: ListTile(
                           onTap: () {
-                            print(value[index].strName);
-                            Get.to(() =>DMPage(profileModel_: value[index]));
+                            Get.to(() => DMPage(profileModel_: value[index]));
                           },
                           splashColor: const Color.fromARGB(255, 85, 94, 228)
                               .withOpacity(0.5),
                           style: ListTileStyle.list,
-                          leading: const CircleAvatar(
+                          leading: CircleAvatar(
                             radius: 20,
+                            backgroundColor:
+                                const Color.fromARGB(255, 85, 94, 228)
+                                    .withOpacity(0.5),
                           ),
                           title: Text(value[index].strName),
                           subtitle: Text(value[index].strPhone),

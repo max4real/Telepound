@@ -10,7 +10,9 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     LoginController controller = Get.put(LoginController());
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 223, 172, 53),
+      // backgroundColor: const Color.fromARGB(255, 223, 172, 53),
+      backgroundColor: const Color(0XFFA7ADED),
+
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -38,7 +40,7 @@ class LoginPage extends StatelessWidget {
                     decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.phone_rounded,
-                            color: Color.fromARGB(255, 223, 172, 53)),
+                            color:Color(0XFFA7ADED)),
                         hintText: "Phone Number"),
                   ),
                   ValueListenableBuilder(
@@ -50,7 +52,7 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                             border: const OutlineInputBorder(),
                             prefixIcon: const Icon(Icons.password_rounded,
-                                color: Color.fromARGB(255, 223, 172, 53)),
+                                color: Color(0XFFA7ADED)),
                             hintText: "Password",
                             suffixIcon: IconButton(
                                 onPressed: () {
@@ -60,7 +62,7 @@ class LoginPage extends StatelessWidget {
                                 icon: value
                                     ? const Icon(Icons.visibility_off,
                                         color:
-                                            Color.fromARGB(255, 223, 172, 53))
+                                           Color(0XFFA7ADED))
                                     : const Icon(Icons.visibility))),
                       );
                     },
@@ -74,7 +76,7 @@ class LoginPage extends StatelessWidget {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 223, 172, 53),
+                        color: const Color(0XFFA7ADED),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       padding: const EdgeInsets.symmetric(
@@ -94,7 +96,7 @@ class LoginPage extends StatelessWidget {
                         "SIGN UP",
                         style: TextStyle(
                           fontSize: 18,
-                          color:  Color.fromARGB(255, 223, 172, 53),
+                          color:  Color(0XFFA7ADED),
                         ),
                       ))
                 ],

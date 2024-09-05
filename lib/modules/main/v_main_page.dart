@@ -1,4 +1,3 @@
-import 'package:api_call/modules/directMessage/v_dm_page.dart';
 import 'package:api_call/modules/profile/v_profile_page.dart';
 import 'package:api_call/modules/user%20list/v_user_page.dart';
 // import 'package:api_call/modules/main/c_main.dart';
@@ -32,6 +31,9 @@ class _MainPageState extends State<MainPage> {
             width: double.infinity,
             decoration: BoxDecoration(
               color: const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
+              // color: const Color(0XFFDEAB42).withOpacity(01),
+
+              
               borderRadius: BorderRadius.circular(20),
             ),
             padding: EdgeInsets.only(

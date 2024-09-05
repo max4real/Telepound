@@ -2,8 +2,8 @@ import 'package:api_call/models/m_profile.dart';
 import 'package:flutter/material.dart';
 
 class DMPage extends StatelessWidget {
-  ProfileModel profileModel_;
-  DMPage({super.key, required this.profileModel_});
+  final ProfileModel profileModel_;
+  const DMPage({super.key, required this.profileModel_});
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +13,17 @@ class DMPage extends StatelessWidget {
         title: Text(profileModel_.strName),
         backgroundColor:
             const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
+            // const Color(0XFFDEAB42).withOpacity(01),
       ),
       body: Column(
         children: [
-          Expanded(child: Placeholder()),
+          const Expanded(child: Placeholder()),
           Container(
             height: 90,
             width: double.infinity,
             decoration: BoxDecoration(
               color: const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
+              
             ),
             padding: EdgeInsets.only(
                 bottom: (MediaQuery.of(context).viewPadding.bottom),
