@@ -60,10 +60,8 @@ class LoginPage extends StatelessWidget {
                                       !controller.xObscured.value;
                                 },
                                 icon: value
-                                    ? const Icon(Icons.visibility_off,
-                                        color:
-                                           Color(0XFFA7ADED))
-                                    : const Icon(Icons.visibility))),
+                                    ? const Icon(Icons.visibility_off)
+                                    : const Icon(Icons.visibility,color: Color(0XFF5E6AE2),))),
                       );
                     },
                   ),
@@ -76,7 +74,8 @@ class LoginPage extends StatelessWidget {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0XFFA7ADED),
+                        // color: const Color(0XFFA7ADED),
+                        color: const Color(0XFF5E6AE2),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       padding: const EdgeInsets.symmetric(
@@ -96,7 +95,7 @@ class LoginPage extends StatelessWidget {
                         "SIGN UP",
                         style: TextStyle(
                           fontSize: 18,
-                          color:  Color(0XFFA7ADED),
+                          color:  Color(0XFF5E6AE2),
                         ),
                       ))
                 ],

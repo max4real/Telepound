@@ -13,20 +13,20 @@ class DMPage extends StatelessWidget {
         title: Text(profileModel_.strName),
         backgroundColor:
             const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
-            // const Color(0XFFDEAB42).withOpacity(01),
+        // const Color(0XFFDEAB42).withOpacity(01),
       ),
       body: Column(
         children: [
           const Expanded(child: Placeholder()),
           Container(
-            height: 90,
+            height: 70,
             width: double.infinity,
             decoration: BoxDecoration(
               color: const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
-              
             ),
-            padding: EdgeInsets.only(
-                bottom: (MediaQuery.of(context).viewPadding.bottom),
+            padding: const EdgeInsets.only(
+                // bottom: (MediaQuery.of(context).viewPadding.bottom-10),
+                // bottom: 10,
                 left: 15,
                 right: 15),
             child: Row(
@@ -37,20 +37,21 @@ class DMPage extends StatelessWidget {
                   width: 300,
                   decoration: BoxDecoration(
                     color:
-                        const Color.fromARGB(255, 85, 94, 228).withOpacity(0.9),
+                        // const Color.fromARGB(255, 85, 94, 228).withOpacity(0.9),
+                        Colors.white,
                     borderRadius: BorderRadius.circular(40),
                   ),
                   padding: const EdgeInsets.symmetric(
                     horizontal: 15,
                   ),
                   child: const TextField(
-                    style: TextStyle(fontSize: 14, color: Colors.white),
-                    maxLines: 1,
+                    style: TextStyle(fontSize: 14, color: Colors.black),
+                    // maxLines: 1,
                     decoration: InputDecoration(
                         enabledBorder: InputBorder.none,
                         border: InputBorder.none,
                         hintText: "Message",
-                        hintStyle: TextStyle(color: Colors.white)),
+                        hintStyle: TextStyle(color: Colors.black)),
                     cursorColor: Colors.black45,
                   ),
                 ),
