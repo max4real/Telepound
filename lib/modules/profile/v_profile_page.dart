@@ -2,6 +2,7 @@ import 'package:api_call/modules/c_data_controller.dart';
 import 'package:api_call/modules/login/v_login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -20,7 +21,7 @@ class ProfilePage extends StatelessWidget {
             children: [
               const SizedBox(
                   width: double.infinity,
-                  height: 70,
+                  height: 60,
                   child: Padding(
                     padding: EdgeInsets.only(top: 10),
                     child: Column(
@@ -39,46 +40,47 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: double.infinity,
-                      height: 210,
+                      height: 200,
                       child: Column(
                         children: [
                           CircleAvatar(
-                            radius: 55,
+                            radius: 45,
                             backgroundColor:
                                 const Color.fromARGB(255, 85, 94, 228)
                                     .withOpacity(0.5),
+                            child: Text(
+                              dataController.profileModel.strName[0],
+                              style: const TextStyle(
+                                  fontSize: 50, fontWeight: FontWeight.bold),
+                            ),
                           ),
                           const SizedBox(
                             height: 8,
                           ),
                           Text(dataController.profileModel.strName,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                               )),
                           const SizedBox(
                             height: 5,
                           ),
                           Text(dataController.profileModel.strPhone,
-                              style: TextStyle(
-                                fontSize: 13,
+                              style: const TextStyle(
+                                fontSize: 14,
                               )),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color:
-                                      const Color.fromARGB(255, 201, 202, 212)
-                                          .withOpacity(0.5),
-                                  borderRadius: BorderRadius.circular(8)),
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 12, vertical: 5),
-                              margin: EdgeInsets.only(top: 10),
-                              child: Text(
-                                "Edit Profile",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400),
+                          SizedBox(
+                            width: 105,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: const Row(
+                                children: [
+                                  Text("Edit"),
+                                  Spacer(),
+                                  Icon(
+                                    Iconsax.edit,
+                                    size: 20,
+                                  ),
+                                ],
                               ),
                             ),
                           )
@@ -92,7 +94,7 @@ class ProfilePage extends StatelessWidget {
                           elevation: 0.5,
                           child: ListTile(
                             onTap: () {
-                              Get.offAll(()=>const LoginPage());
+                              Get.offAll(() => const LoginPage());
                             },
                             splashColor: const Color.fromARGB(255, 85, 94, 228)
                                 .withOpacity(0.5),

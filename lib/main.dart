@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 void main() {
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: ThemeData(useMaterial3: false),
+    theme: ThemeData(useMaterial3: true),
     home: const LoginPage(),
   ));
   Get.put(DataController());

@@ -1,133 +1,56 @@
+import 'package:api_call/modules/main/c_main.dart';
 import 'package:api_call/modules/profile/v_profile_page.dart';
 import 'package:api_call/modules/user%20list/v_user_page.dart';
 // import 'package:api_call/modules/main/c_main.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 // import 'package:get/get.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  MainPage({super.key});
 
   @override
   State<MainPage> createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
-  int index = 0;
-
   @override
   Widget build(BuildContext context) {
-    // MainPageController controller = Get.put(MainPageController());
+    MainPageController controller = Get.put(MainPageController());
     return Scaffold(
-      // backgroundColor: const Color.fromARGB(255, 223, 172, 53),
       backgroundColor: const Color(0XFFF7F7F7),
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
-              child: shownePage(),
-            ),
-          ),
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
-              // color: const Color(0XFFDEAB42).withOpacity(01),
-
-              borderRadius: BorderRadius.circular(20),
-            ),
-            padding: EdgeInsets.only(
-              bottom: (MediaQuery.of(context).viewPadding.bottom),
-              top: 10,
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: IconButton(
-                      onPressed: () {
-                        index = 0;
-                        setState(() {});
-                      },
-                      icon: Icon(
-                        Icons.person_rounded,
-                        size: 30,
-                        color: (index == 0)
-                            ? const Color(0XFF5E6AE2)
-                            : Colors.white,
-                      )),
-                ),
-                Expanded(
-                  child: IconButton(
-                      onPressed: () {
-                        index = 1;
-                        setState(() {});
-                      },
-                      icon: Icon(
-                        Icons.history,
-                        size: 30,
-                        color: (index == 1)
-                            ? const Color(0XFF5E6AE2)
-                            : Colors.white,
-                      )),
-                ),
-                Expanded(
-                  child: IconButton(
-                      onPressed: () {
-                        index = 2;
-                        setState(() {});
-                      },
-                      icon: Icon(
-                        Icons.notifications,
-                        size: 30,
-                        color: (index == 2)
-                            ? const Color(0XFF5E6AE2)
-                            : Colors.white,
-                      )),
-                ),
-                Expanded(
-                  child: IconButton(
-                      onPressed: () {
-                        index = 3;
-                        setState(() {});
-                      },
-                      icon: Icon(
-                        Icons.bar_chart_rounded,
-                        size: 30,
-                        color: (index == 3)
-                            ? const Color(0XFF5E6AE2)
-                            : Colors.white,
-                      )),
-                ),
-                Expanded(
-                  child: IconButton(
-                      onPressed: () {
-                        index = 4;
-                        setState(() {});
-                      },
-                      icon: Icon(
-                        Icons.settings,
-                        size: 30,
-                        color: (index == 4)
-                            ? const Color(0XFF5E6AE2)
-                            : Colors.white,
-                      )),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
+      bottomNavigationBar: Obx(() {
+        return NavigationBar(
+          selectedIndex: controller.selectedIndex.value,
+          elevation: 0,
+          height: 65,
+          onDestinationSelected: (value) {
+            controller.selectedIndex.value = value;
+          },
+          destinations: const [
+            NavigationDestination(icon: Icon(Iconsax.user), label: "CONTACT"),
+            NavigationDestination(
+                icon: Icon(Iconsax.message), label: "MESSAGE"),
+            NavigationDestination(
+                icon: Icon(Iconsax.setting), label: "PROFILE"),
+          ],
+        );
+      }),
+      body: Obx(() {
+        return shownePage();
+      }),
     );
   }
 
   Widget shownePage() {
-    switch (index) {
+    MainPageController controller = Get.find();
+    switch (controller.selectedIndex.value) {
       case 0:
         return const UserListPage();
       case 1:
         return const ProfilePage();
       case 2:
-        return const ProfilePage();
-      case 3:
         return const ProfilePage();
       default:
         return const ProfilePage();

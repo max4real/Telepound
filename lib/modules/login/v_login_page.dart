@@ -42,6 +42,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       TextField(
                         controller: controller.phoneNumber,
+                        keyboardType: TextInputType.phone,
                         decoration: const InputDecoration(
                             border: OutlineInputBorder(),
                             prefixIcon: Icon(Icons.phone_rounded,

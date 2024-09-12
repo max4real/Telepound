@@ -12,9 +12,9 @@ class UserListPage extends StatelessWidget {
     return Scaffold(
       // backgroundColor: const Color.fromARGB(255, 240, 233, 233),
       appBar: AppBar(
-        title: const Text("Contacts"),
-        backgroundColor:
-            const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
+        title: const Text("Contacts",style: TextStyle(color: Colors.white,fontSize: 17),),
+        backgroundColor:Colors.blueGrey
+            // const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
         //  const Color(0XFFDEAB42).withOpacity(0.9),
       ),
       body: ValueListenableBuilder(
@@ -50,6 +50,11 @@ class UserListPage extends StatelessWidget {
                             backgroundColor:
                                 const Color.fromARGB(255, 85, 94, 228)
                                     .withOpacity(0.5),
+                            child: Text(
+                              value[index].strName[0],
+                              style: const TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
                           ),
                           title: Text(value[index].strName),
                           subtitle: Text(value[index].strPhone),
