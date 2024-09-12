@@ -19,21 +19,21 @@ class DMPage extends StatelessWidget {
         children: [
           const Expanded(child: Placeholder()),
           Container(
-            height: 70,
+            height: 80,
             width: double.infinity,
             decoration: BoxDecoration(
               color: const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
             ),
             padding: const EdgeInsets.only(
                 // bottom: (MediaQuery.of(context).viewPadding.bottom-10),
-                // bottom: 10,
+                bottom: 10,
                 left: 15,
                 right: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  height: 35,
+                  height: 40,
                   width: 300,
                   decoration: BoxDecoration(
                     color:

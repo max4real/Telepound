@@ -33,7 +33,6 @@ class _MainPageState extends State<MainPage> {
               color: const Color.fromARGB(255, 85, 94, 228).withOpacity(0.5),
               // color: const Color(0XFFDEAB42).withOpacity(01),
 
-              
               borderRadius: BorderRadius.circular(20),
             ),
             padding: EdgeInsets.only(
@@ -50,7 +49,10 @@ class _MainPageState extends State<MainPage> {
                       },
                       icon: Icon(
                         Icons.person_rounded,
-                        color: (index == 0) ? Colors.greenAccent : Colors.white,
+                        size: 30,
+                        color: (index == 0)
+                            ? const Color(0XFF5E6AE2)
+                            : Colors.white,
                       )),
                 ),
                 Expanded(
@@ -61,7 +63,10 @@ class _MainPageState extends State<MainPage> {
                       },
                       icon: Icon(
                         Icons.history,
-                        color: (index == 1) ? Colors.greenAccent : Colors.white,
+                        size: 30,
+                        color: (index == 1)
+                            ? const Color(0XFF5E6AE2)
+                            : Colors.white,
                       )),
                 ),
                 Expanded(
@@ -72,7 +77,10 @@ class _MainPageState extends State<MainPage> {
                       },
                       icon: Icon(
                         Icons.notifications,
-                        color: (index == 2) ? Colors.greenAccent : Colors.white,
+                        size: 30,
+                        color: (index == 2)
+                            ? const Color(0XFF5E6AE2)
+                            : Colors.white,
                       )),
                 ),
                 Expanded(
@@ -83,7 +91,10 @@ class _MainPageState extends State<MainPage> {
                       },
                       icon: Icon(
                         Icons.bar_chart_rounded,
-                        color: (index == 3) ? Colors.greenAccent : Colors.white,
+                        size: 30,
+                        color: (index == 3)
+                            ? const Color(0XFF5E6AE2)
+                            : Colors.white,
                       )),
                 ),
                 Expanded(
@@ -94,7 +105,10 @@ class _MainPageState extends State<MainPage> {
                       },
                       icon: Icon(
                         Icons.settings,
-                        color: (index == 4) ? Colors.greenAccent : Colors.white,
+                        size: 30,
+                        color: (index == 4)
+                            ? const Color(0XFF5E6AE2)
+                            : Colors.white,
                       )),
                 ),
               ],

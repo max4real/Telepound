@@ -92,7 +92,7 @@ class ProfilePage extends StatelessWidget {
                           elevation: 0.5,
                           child: ListTile(
                             onTap: () {
-                              Get.to(const LoginPage());
+                              Get.offAll(()=>const LoginPage());
                             },
                             splashColor: const Color.fromARGB(255, 85, 94, 228)
                                 .withOpacity(0.5),
